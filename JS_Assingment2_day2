@@ -1,0 +1,74 @@
+/*The slice() Method
+slice() extracts a part of a string and returns the extracted part in a new string.
+The method takes 2 parameters: the start position, and the end position (end not included).*/
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+
+/*The substring() Method
+substring() is similar to slice().
+The difference is that substring() cannot accept negative indexes.*/
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+
+/*Replacing String Content
+The replace() method replaces a specified value with another value in a string:*/
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+
+//Methods of Arrays//
+
+/*The JavaScript method toString() converts an array to a string of (comma separated) array values.*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+
+/*The join() method also joins all array elements into a string.
+It behaves just like toString(), but in addition you can specify the separator:*/
+var fruits = ["Banana", "Orange","Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+/*Popping and Pushing
+When you work with arrays, it is easy to remove elements and add new elements.
+This is what popping and pushing is:
+Popping items out of an array, or pushing items into an aray.
+
+Popping
+The pop() method removes the last element from an array:*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();              // Removes the last element ("Mango") fromfruits
+
+/*The pop() method returns the value that was "popped out":*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var x = fruits.pop();      // the value of x is "Mango"
+
+/*Shifting Elements
+Shifting is equivalent to popping, working on the first element instead of the last.
+The shift() method removes the first array element and "shifts" all other elements to a lower index.*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();            // Removes the first element "Banana" from fruits
+
+/*The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
+
+/*Deleting Elements
+Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0];           // Changes the first element in fruits to undefined
+
+/*Splicing an Array
+The splice() method can be used to add new items to an array:*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+/*Sorting an Array
+The sort() method sorts an array alphabetically:*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();            // Sorts the elements of fruits
+
+/*Reversing an Array
+The reverse() method reverses the elements in an array.*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();            // Sorts the elements of fruits
+fruits.reverse();         // Reverses the order of the elements
+
